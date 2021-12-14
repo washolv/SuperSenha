@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bmb-s5-Mqn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gerador de Senhas-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SuperSenha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantidade de Senhas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvN-Ru-CKv">
+                                <rect key="frame" x="25" y="170" width="176" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.59607843137254901" green="0.14117647058823529" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G9s-X6-IyI">
+                                <rect key="frame" x="290" y="163.5" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="L1o-jY-1w1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de Caracteres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbz-Py-ZER">
+                                <rect key="frame" x="25" y="211" width="176" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.59607843140000005" green="0.14117647059999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="máx. 16" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gGZ-IT-Sat">
+                                <rect key="frame" x="290" y="204.5" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="q0m-AD-bPb"/>
+                                    <constraint firstAttribute="width" constant="100" id="q9y-ZU-fPb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usar Letras minúsculas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBY-uH-zgn">
+                                <rect key="frame" x="25" y="252" width="174.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.59607843140000005" green="0.14117647059999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gw8-jm-NGW">
+                                <rect key="frame" x="341" y="247" width="51" height="31"/>
+                                <color key="tintColor" red="0.59607843137254901" green="0.14117647058823529" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="onTintColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usar números" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCa-sS-0NX">
+                                <rect key="frame" x="25" y="293" width="105.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.59607843140000005" green="0.14117647059999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ph-Px-7o8">
+                                <rect key="frame" x="341" y="288" width="51" height="31"/>
+                                <color key="tintColor" red="0.59607843140000005" green="0.14117647059999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="onTintColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usar Letras maiúsculas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDb-bU-nPT">
+                                <rect key="frame" x="25" y="334" width="174" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.59607843140000005" green="0.14117647059999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kaR-T5-O3M">
+                                <rect key="frame" x="341" y="329" width="51" height="31"/>
+                                <color key="tintColor" red="0.59607843140000005" green="0.14117647059999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="onTintColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usar caracteres especiais" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkT-kZ-Z9p">
+                                <rect key="frame" x="25" y="375" width="193.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.59607843140000005" green="0.14117647059999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koV-IZ-L03">
+                                <rect key="frame" x="341" y="370" width="51" height="31"/>
+                                <color key="tintColor" red="0.59607843140000005" green="0.14117647059999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="onTintColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEE-fZ-mMf">
+                                <rect key="frame" x="24" y="426" width="366" height="48"/>
+                                <color key="backgroundColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="HpI-82-NnB"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Gerar Senhas">
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="19"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="yos-Fm-xmr" kind="show" id="y2f-ha-xvu"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="hik-fv-Tbg">
+                                <rect key="frame" x="121" y="612" width="172.5" height="210"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SBY-uH-zgn" firstAttribute="top" secondItem="Dbz-Py-ZER" secondAttribute="bottom" constant="20" id="5k2-tx-aEV"/>
+                            <constraint firstItem="G9s-X6-IyI" firstAttribute="centerY" secondItem="bvN-Ru-CKv" secondAttribute="centerY" id="Auk-Rz-Zca"/>
+                            <constraint firstItem="bvN-Ru-CKv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Bpd-uJ-qai"/>
+                            <constraint firstItem="Gw8-jm-NGW" firstAttribute="centerY" secondItem="SBY-uH-zgn" secondAttribute="centerY" id="BtV-FI-Y4Q"/>
+                            <constraint firstItem="lkT-kZ-Z9p" firstAttribute="top" secondItem="WDb-bU-nPT" secondAttribute="bottom" constant="20" id="D8o-aS-EJb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G9s-X6-IyI" secondAttribute="trailing" constant="24" id="DNh-kW-hQb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OEE-fZ-mMf" secondAttribute="trailing" constant="24" id="DbI-co-shR"/>
+                            <constraint firstItem="OEE-fZ-mMf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="I9X-8S-dIM"/>
+                            <constraint firstItem="bvN-Ru-CKv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="IuY-FV-h8Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gGZ-IT-Sat" secondAttribute="trailing" constant="24" id="L8J-mM-d71"/>
+                            <constraint firstItem="bvN-Ru-CKv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="LJd-LZ-3It"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="koV-IZ-L03" secondAttribute="trailing" constant="24" id="NJX-Ae-pM6"/>
+                            <constraint firstItem="SBY-uH-zgn" firstAttribute="top" secondItem="Dbz-Py-ZER" secondAttribute="bottom" constant="20" id="PZJ-6Y-2gl"/>
+                            <constraint firstItem="koV-IZ-L03" firstAttribute="centerY" secondItem="lkT-kZ-Z9p" secondAttribute="centerY" id="Q7V-5g-lSm"/>
+                            <constraint firstItem="OEE-fZ-mMf" firstAttribute="top" secondItem="koV-IZ-L03" secondAttribute="bottom" constant="25" id="U1t-Gl-iyg"/>
+                            <constraint firstItem="QCa-sS-0NX" firstAttribute="top" secondItem="SBY-uH-zgn" secondAttribute="bottom" constant="20" id="Ut4-Vu-j5f"/>
+                            <constraint firstItem="Dbz-Py-ZER" firstAttribute="top" secondItem="bvN-Ru-CKv" secondAttribute="bottom" constant="20" id="WsU-Fn-v92"/>
+                            <constraint firstItem="4ph-Px-7o8" firstAttribute="centerY" secondItem="QCa-sS-0NX" secondAttribute="centerY" id="Wys-bT-nzF"/>
+                            <constraint firstItem="gGZ-IT-Sat" firstAttribute="centerY" secondItem="Dbz-Py-ZER" secondAttribute="centerY" id="YzI-4T-lra"/>
+                            <constraint firstItem="G9s-X6-IyI" firstAttribute="leading" secondItem="bvN-Ru-CKv" secondAttribute="trailing" constant="89" id="aab-bI-8CZ"/>
+                            <constraint firstItem="hik-fv-Tbg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b7I-F4-UC2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kaR-T5-O3M" secondAttribute="trailing" constant="24" id="biq-6S-Ghb"/>
+                            <constraint firstItem="SBY-uH-zgn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="bwC-rU-hQo"/>
+                            <constraint firstItem="kaR-T5-O3M" firstAttribute="centerY" secondItem="WDb-bU-nPT" secondAttribute="centerY" id="fHs-Ke-FhD"/>
+                            <constraint firstItem="WDb-bU-nPT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="g7k-sg-jL7"/>
+                            <constraint firstItem="gGZ-IT-Sat" firstAttribute="leading" secondItem="Dbz-Py-ZER" secondAttribute="trailing" constant="89" id="ke8-Rr-ob0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gw8-jm-NGW" secondAttribute="trailing" constant="24" id="lEV-ZA-2pF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hik-fv-Tbg" secondAttribute="bottom" constant="40" id="lge-0q-w5U"/>
+                            <constraint firstItem="lkT-kZ-Z9p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="m7P-Ty-GYb"/>
+                            <constraint firstItem="QCa-sS-0NX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="mw2-Of-ZI3"/>
+                            <constraint firstItem="WDb-bU-nPT" firstAttribute="top" secondItem="QCa-sS-0NX" secondAttribute="bottom" constant="20" id="r5M-vG-KmA"/>
+                            <constraint firstItem="Dbz-Py-ZER" firstAttribute="top" secondItem="bvN-Ru-CKv" secondAttribute="bottom" constant="20" id="tSV-yN-FPm"/>
+                            <constraint firstItem="bvN-Ru-CKv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="xEk-AS-uHR"/>
+                            <constraint firstItem="Dbz-Py-ZER" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="xMl-vf-UZ3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4ph-Px-7o8" secondAttribute="trailing" constant="24" id="y6g-9Q-tAg"/>
+                            <constraint firstItem="SBY-uH-zgn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="yoD-Z9-M8N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gerador de Senhas" id="pp2-wV-DHc">
+                        <barButtonItem key="backBarButtonItem" title="Gerador de Senhas" id="X8g-2x-b3t"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="swCapitalLetters" destination="kaR-T5-O3M" id="gcJ-2z-uL7"/>
+                        <outlet property="swLetters" destination="Gw8-jm-NGW" id="LJn-GO-waz"/>
+                        <outlet property="swNumbers" destination="4ph-Px-7o8" id="wbu-eZ-wqC"/>
+                        <outlet property="swSpecialCharacters" destination="koV-IZ-L03" id="DZP-Lf-YGz"/>
+                        <outlet property="tfNumberOfCaracters" destination="gGZ-IT-Sat" id="nZ0-uq-eBx"/>
+                        <outlet property="tfTotalPasswords" destination="G9s-X6-IyI" id="An4-iS-VNW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="97.767857142857139"/>
+        </scene>
+        <!--Lista de Senhas-->
+        <scene sceneID="PsA-le-N2w">
+            <objects>
+                <viewController id="yos-Fm-xmr" customClass="PasswordsViewController" customModule="SuperSenha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OLo-yl-NHB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXJ-hH-JvZ">
+                                <rect key="frame" x="188.5" y="836.5" width="207.5" height="35.5"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dicas sobre segurança">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ESv-dO-aVV" kind="presentation" id="v4G-Gt-wBs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8O-eB-94x">
+                                <rect key="frame" x="16" y="754.5" width="382" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FMK-O3-oqX"/>
+                                </constraints>
+                                <color key="tintColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Gerar novamente">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="generate:" destination="yos-Fm-xmr" eventType="touchUpInside" id="zGA-CU-z9R"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="00000" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u5C-lv-IyF">
+                                <rect key="frame" x="16" y="165" width="382" height="573.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9BU-kh-Hq1"/>
+                        <color key="backgroundColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="LXJ-hH-JvZ" firstAttribute="bottom" secondItem="9BU-kh-Hq1" secondAttribute="bottom" constant="10" id="38M-ou-Evv"/>
+                            <constraint firstItem="e8O-eB-94x" firstAttribute="top" secondItem="u5C-lv-IyF" secondAttribute="bottom" constant="16" id="ANX-dy-ZH7"/>
+                            <constraint firstItem="LXJ-hH-JvZ" firstAttribute="top" secondItem="e8O-eB-94x" secondAttribute="bottom" constant="38" id="ESj-QV-8gD"/>
+                            <constraint firstItem="u5C-lv-IyF" firstAttribute="top" secondItem="9BU-kh-Hq1" secondAttribute="top" constant="25" id="Nym-L9-3Wk"/>
+                            <constraint firstItem="9BU-kh-Hq1" firstAttribute="trailing" secondItem="u5C-lv-IyF" secondAttribute="trailing" constant="16" id="Qpa-MF-JO8"/>
+                            <constraint firstItem="e8O-eB-94x" firstAttribute="leading" secondItem="9BU-kh-Hq1" secondAttribute="leading" constant="16" id="dLj-86-vpW"/>
+                            <constraint firstItem="9BU-kh-Hq1" firstAttribute="trailing" secondItem="LXJ-hH-JvZ" secondAttribute="trailing" constant="18" id="hdi-Vh-Qce"/>
+                            <constraint firstItem="9BU-kh-Hq1" firstAttribute="trailing" secondItem="e8O-eB-94x" secondAttribute="trailing" constant="16" id="uIC-i4-mrd"/>
+                            <constraint firstItem="u5C-lv-IyF" firstAttribute="leading" secondItem="9BU-kh-Hq1" secondAttribute="leading" constant="16" id="yzY-wU-kHs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lista de Senhas" id="cxb-0c-iak"/>
+                    <connections>
+                        <outlet property="tvPassword" destination="u5C-lv-IyF" id="6vj-mM-qwW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n1c-Qs-BJd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1611.5942028985507" y="97.767857142857139"/>
+        </scene>
+        <!--Security Tips View Controller-->
+        <scene sceneID="sgX-ay-XPi">
+            <objects>
+                <viewController id="ESv-dO-aVV" customClass="SecurityTipsViewController" customModule="SuperSenha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3L6-hU-Hqx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Dicas para ter uma senha forte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IH5-Jh-yt3">
+                                <rect key="frame" x="66.5" y="15" width="281" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdY-BZ-pSD">
+                                <rect key="frame" x="321" y="757" width="69" height="31"/>
+                                <color key="tintColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Fechar"/>
+                                <connections>
+                                    <action selector="close:" destination="ESv-dO-aVV" eventType="touchUpInside" id="gke-l1-TnF"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcc-jd-s0x">
+                                <rect key="frame" x="20" y="107" width="370" height="606"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="1. Escolha senhas fáceis de lembrar ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Uma senha fácil de guardar na memória evita que o usuário tenha que anotá-la em papeis ou arquivos, que podem chegar às mãos de pessoas erradas.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="2. Não use palavras reais ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Uma palavra que pode ser encontrada no dicionário pode facilitar o trabalho de hackers. Para tornar esse trabalho mais difícil, use frases ao invés de substantivos.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="3.  Combine maiúsculas, minúsculas, números e caracteres não alfanuméricos">
+                                        <attributes>
+                                            <color key="NSColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+A inserção desses itens na senha complica ainda mais o trabalho de quem estiver mal intencionado.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="4.  Não recicle senhas">
+                                        <attributes>
+                                            <color key="NSColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Por exemplo, não use "senha1 ‘, ' senha2 ‘, ' senha3 ' em contas diferentes. Ao mudar apenas um caractere, o usuário corre o risco de entregar o acesso a outros serviços ao cibercriminoso
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="5. Não use a mesma senha para várias contas">
+                                        <attributes>
+                                            <color key="NSColor" red="0.61568627450980395" green="0.25882352941176467" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+O mesmo se aplica nesse caso. Caso o pior aconteça, o usuário perde a segurança de todas as suas contas.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="6.   Não use senhas óbvias que podem ser facilmente descobertas">
+                                        <attributes>
+                                            <color key="NSColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Não escolha como código o nome de pessoas da família, como filho, marido ou até do animal de estimação. Ao investigar levemente a vida de alguém, esses nomes são facilmente descobertos e podem se tornar uma arma.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="7.  Não compartilhe sua senha">
+                                        <attributes>
+                                            <color key="NSColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Nunca compartilhe suas informações pessoais. Se alguma empresa pedir sua senha, mesmo que por telefone, não informe. Lembre-se, você não sabe quem está do outro lado da linha telefônica.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">8.  Se algum site enviar um e-mail de confirmação com uma nova senha, inicie uma nova sessão na página e altere sua senha imediatamente</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Esse procedimento evita possíveis fraudes. Ao abrir links suspeitos, o usuário pode acabar fornecendo informações pessoais sem perceber.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">9.     Certifique-se de que seu software de segurança da Internet bloqueie as intenções dos cibercriminosos de interceptar ou roubar senhas</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Muitos ataques podem ser evitados ao ativar serviços básicos de proteção na internet dos antivírus.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="10.  Se você achar que é difícil lembrar-se de várias senhas complexas, considere a instalação de um gerenciadores de senhas ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Há diversos programas disponíveis que armazenam os dados de maneira segura e ajudam os mais esquecidos.</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KFu-Aw-mVz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IH5-Jh-yt3" firstAttribute="top" secondItem="KFu-Aw-mVz" secondAttribute="top" constant="15" id="26A-is-crV"/>
+                            <constraint firstItem="IH5-Jh-yt3" firstAttribute="centerX" secondItem="3L6-hU-Hqx" secondAttribute="centerX" id="6Ip-mo-daU"/>
+                            <constraint firstItem="KFu-Aw-mVz" firstAttribute="trailing" secondItem="cdY-BZ-pSD" secondAttribute="trailing" constant="24" id="TT4-km-RZf"/>
+                            <constraint firstItem="KFu-Aw-mVz" firstAttribute="bottom" secondItem="cdY-BZ-pSD" secondAttribute="bottom" constant="20" id="kR4-Gg-vVe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8y-7o-iGQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2295.6521739130435" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Da-Ed-mJA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bmb-s5-Mqn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gTN-9N-ZVt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.61568629740000003" green="0.2588235438" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="textShadowColor" red="0.61568627450980395" green="0.25882352941176467" blue="0.46274509803921571" alpha="0.47620033112582782" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ysb-fL-f0C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ys-yk-PbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="98"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+    <resources>
+        <image name="lock" width="172.5" height="210"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
